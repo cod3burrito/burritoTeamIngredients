@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const classes = require("./lib/employee");
-const generateHTML = require('./src/generatehtml');
+const classes = require("./lib/Employee");
+const generateHTML = require('./src/genHTML');
 const fs = require('fs');
 let manager = "";
 let team = [];
@@ -9,7 +9,7 @@ let engineerInfo = "";
 
 function createFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-  err ? console.error(err) : console.log('Success! Your burrito has been built!')
+  err ? console.error(err) : console.log('Success! Your burrito has been wrapped!')
 );
 }
 
@@ -107,37 +107,34 @@ const intern = () => {inquirer.prompt([
         const data = generateHTML.generateHTML(manager, team)
         const file = "./dist/index.html";
         createFile(file, data);
-  }
- 
-    
+  }   
   });
-
   };
 
 const init = () => {inquirer.prompt([
     {
         type: 'input',
-        message: `Manager's Name`,
+        message: `What is your manager's name?`,
         name: 'name',
     },
     {
         type: `input`,
-        message: `Manager's ID`,
+        message: `What is your their ID?`,
         name: `id`,
     },
     {
         type: `input`,
-        message: `Manager's Email`,
+        message: `Please provide the manager's email.`,
         name: `email`,
     },
     {
         type: `input`,
-        message: `Manager's office number`,
+        message: `What is the manager's office number?`,
         name: `office`, 
     },
     {
         type: `list`,
-        message: `Add another team member?`,
+        message: `Would you like to build a stronger burrito?`,
         choices: [`Engineer`, `Intern`, `Team is complete`],
         name: `next`
     }
@@ -151,16 +148,14 @@ const init = () => {inquirer.prompt([
         manager = new classes.managers(response.name, response.id, response.email, response.office);
         intern();
         break; 
-    case "Team is complete":
+    case "Dang that's a strong burrito!":
         manager = new classes.managers(response.name, response.id, response.email, response.office);
         const data = generateHTML.generateHTML(manager, team)
         console.log(manager);
         const file = "./dist/index.html";
         createFile(file, data);
   }
-
   });
-
   };
 
   init();

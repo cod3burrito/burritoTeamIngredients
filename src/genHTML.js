@@ -13,7 +13,7 @@ const createTeam = (team) => {
   let divs = 
   `<div class="card" style="width: 18rem">
     <h3 class="card-header bg-primary text-white"> ${team[i].name} </h3>
-    <h5 class="card-header bg-primary text-white">${team[i].role}</h5>
+    <h5 class="card-header bg-grey text-white">${team[i].role}</h5>
     <div class="card">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: ${team[i].id}</li>
