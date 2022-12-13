@@ -104,7 +104,7 @@ const intern = () => {inquirer.prompt([
     case "Team is complete":
         engineerInfo = new classes.engineer(response.name, response.id, response.email, response.github);
         team.push(engineerInfo);
-        const data = generateHTML.generateHTML(manager, team)
+        const data = generateHTML.genHTML(manager, team)
         const file = "./dist/index.html";
         createFile(file, data);
   }   
