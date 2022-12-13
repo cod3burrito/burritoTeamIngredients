@@ -2,7 +2,11 @@
 Build a team! 
 
 ## Installation
-Pull it down and run `npm i` if you feel so inclined. It doesn't like me.
+Pull it down and run `npm i` to use it in Visual Studio Code or some other IDE.
 
 ## Credit 
-Shout out to the class activities, my intructor's lectures, and my classmates for guiding me while i imbibe too much seltzer on too little sleep
+Shout out to the class activities, my intructor's lectures, and my puppy for helping me get through this.
+
+## Video
+Link to video here: https://drive.google.com/file/d/1F8O-18UecPHLr_Y7LOfOsrEIgW_m5bh_/view 
+
